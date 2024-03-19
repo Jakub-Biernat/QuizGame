@@ -13,3 +13,4 @@ quiz_brain = QuizBrain(question_bank)
 
 while quiz_brain.still_has_questions():
     quiz_brain.next_question()
+quiz_brain.print_final_score()

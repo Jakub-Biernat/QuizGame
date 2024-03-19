@@ -10,6 +10,7 @@ class QuizBrain:
         self.question_number += 1
         user_answer = input(f"Q.{self.question_number}: {question.text} (True/False)?: ")
         self.check_answer(user_answer, question.answer)
+
     def still_has_questions(self):
         return self.question_number < len(self.question_list)
 
@@ -21,3 +22,8 @@ class QuizBrain:
             print("That's wrong.")
         print(f"The correct answer was: {correct_answer}")
         print(f"Current score: {self.score}/{self.question_number}")
+        print()
+
+    def print_final_score(self):
+        print("You've completed the Brain Quiz!")
+        print(f"Your final score was: {self.score}/{self.question_number}")
